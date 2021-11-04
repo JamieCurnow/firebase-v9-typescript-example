@@ -1,0 +1,13 @@
+{
+  "name": "firebase-v9-typescript-example",
+  "description": "An example, minimal repo showing how to use the firebase v9 SDK with types :)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "9.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.6"
+  }
+}
