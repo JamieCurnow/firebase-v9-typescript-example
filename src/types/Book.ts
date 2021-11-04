@@ -4,4 +4,7 @@ export interface Book {
   title: string
   author: Author
   numberOfPages: number
+  meta: {
+    created: string
+  }
 }
