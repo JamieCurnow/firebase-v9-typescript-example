@@ -2,10 +2,10 @@
 import { doc, getDoc, getDocs, setDoc, updateDoc } from '@firebase/firestore'
 
 // Import our db object
-import { db } from './composables/db'
+import { usersCol, booksCol } from './composables/useDb'
 
 // Make a ref to a single user's doc
-const singleUserDocRef = doc(db.users, 'user_12345')
+const singleUserDocRef = doc(usersCol, 'user_12345')
 
 // Set some data on that doc
 await setDoc(singleUserDocRef, {
@@ -30,7 +30,7 @@ if (singleUser) console.log(singleUser.firstName)
 
 
 // Get all the book docs from the db
-const bookDocs = await getDocs(db.books)
+const bookDocs = await getDocs(booksCol)
 
 // Hover over books and see it's typed!
 const books = bookDocs.docs.map(x => x.data())

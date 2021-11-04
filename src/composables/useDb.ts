@@ -22,12 +22,7 @@ import { User } from 'src/types/User'
 import { Author } from 'src/types/Author'
 import { Book } from 'src/types/Book'
 
-// and maintain this obj which will type everything downstream
-export const db = {
-  // put firestore in here so we can access it directly if needed
-  firestore,
-  // And then list all of your collections with their types
-  users: createCollection<User>('users'),
-  authors: createCollection<Author>('authors'),
-  books: createCollection<Book>('books')
-}
+// export all your collections
+export const usersCol = createCollection<User>('users')
+export const authorsCol = createCollection<Author>('authors')
+export const booksCol = createCollection<Book>('books')
